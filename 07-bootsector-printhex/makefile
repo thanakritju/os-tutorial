@@ -1,4 +1,4 @@
-FILENAME=boot_sect_helloworld
+FILENAME=boot_sect_deadbeef
 
 build:
 	nasm ${FILENAME}.asm -f bin -o ${FILENAME}.bin
