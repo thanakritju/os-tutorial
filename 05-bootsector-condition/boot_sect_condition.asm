@@ -1,15 +1,23 @@
-mov ah, 0x0e
+mov bx, 30
 
-mov al, 48
+cmp bx, 4
+jle condition1
+cmp bx, 40
+jge condition2
+mov al, 'B'
+jmp end
 
-loop:
-    cmp al, 58
-    je the_end
+condition1:
+    mov al, 'A'
+    jmp end
+
+condition2:
+    mov al, 'C'
+    jmp end
+
+end:
+    mov ah, 0x0e
     int 0x10
-    add al, 1
-    jmp loop
-
-the_end:
 
 jmp $
 
