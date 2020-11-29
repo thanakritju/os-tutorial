@@ -1,7 +1,7 @@
 disk_load:
     push dx
 
-    mov ah, 0x02
+    mov ah, 0x02 ; BIOS read sector function
     mov al, dh
     mov ch, 0x00
     mov dh, 0x00
@@ -20,7 +20,7 @@ disk_error:
 
     mov bx, DISK_ERROR_MSG
     call print_string
-    ret
+    jmp $
 
 DISK_ERROR_MSG:
     db "Disk read error!", 0
