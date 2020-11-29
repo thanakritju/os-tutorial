@@ -61,7 +61,5 @@ convert_to_ascii: ; using cx
     end_convert:
     ret
 
-%include "../06-bootsector-printstring/print_string.asm"
-
 HEX_OUT:
     db "0x0000", 0
